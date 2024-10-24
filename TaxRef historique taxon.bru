@@ -1,0 +1,19 @@
+meta {
+  name: TaxRef historique taxon
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://taxref.mnhn.fr/api/taxa/{{cdNom}}/taxrefHistory
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  cdNom: 65199
+}
+
+docs {
+  Historique d'un taxon au cours des versions de TAXREF
+}

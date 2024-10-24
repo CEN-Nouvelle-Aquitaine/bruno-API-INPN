@@ -1,0 +1,23 @@
+meta {
+  name: Recherche taxon
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://taxref.mnhn.fr/api/taxa/fuzzyMatch?term={{libTaxon}}
+  body: none
+  auth: none
+}
+
+params:query {
+  term: {{libTaxon}}
+}
+
+vars:pre-request {
+  libTaxon: Parus majo
+}
+
+docs {
+  Obtenir un taxon à partir d'une orthographe correcte ou approchée de son nom (avec ou sans auteur)
+}

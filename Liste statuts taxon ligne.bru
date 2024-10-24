@@ -1,0 +1,19 @@
+meta {
+  name: Liste statuts taxon ligne
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://taxref.mnhn.fr/api/taxa/{{cdNom}}/status/lines
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  cdNom: 65199
+}
+
+docs {
+  Liste des statuts d'un taxon donné. Les résultats sont obtenus en colonnes
+}
